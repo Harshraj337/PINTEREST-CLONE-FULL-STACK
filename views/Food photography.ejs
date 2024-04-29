@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinterest</title>
+    <link rel="icon" href="/images/Pinterest-logo.png">
+    <link rel="stylesheet" href="/stylesheets/dashboard.css">
+</head>
+<body>
+    <div id="container">
+        <section id="First">
+<!-- .....................................NAVBAR STARTS.............................................................. -->
+       <div id="nav">
+        <img src="/images/Pinterest-Logooo.png" class="firstpic">
+        <div class="left-nav">
+            <a href="dashboard">Home</a>
+            <a href="/Today">Explore</a>
+            <a href="/add">Create</a>
+        </div>
+        <div class="center-nav">
+            <div class="searchbar">
+            <input id="searchbar-space" type="text" name="search_bar"  placeholder="Food Photography" onclick="SEARCHBAR()" >
+            <a href="/search1" id="search">SEARCH FOR FEEDS</a>
+            </div>
+        </div>
+        <div id="hamburger-popup">
+            <img src="/images/close.png" alt="" id="close" onclick="CLOSEE()">
+            <a href="/dashboard">Home</a>
+            <a href="/Today">Explore</a>
+            <a href="/add">Create</a>
+            <a href="/search1">Search for feed</a>
+            <a href="/profile">Profile</a>
+            <a href="/logout">Logout</a>
+        </div>
+<!-- ........................................POPUP STARTS............................................................................. -->
+        <div id="popup">
+            <div class="popup-content">
+                <h4>Ideas for you</h4>
+                <div class="contents">
+                <div class="ideas-content">
+                    <div class="image1">
+                        <a href="/partyinvite"><img src="/images/Dashboard/Party invite.jpg" id="imagee"></a>
+                    </div>
+                    <div class="text">
+                        <h5>Party invite template</h5>
+                    </div>
+                </div>
+                <div class="ideas-content">
+                    <div class="image1">
+                       <a href="/foodphotography"><img src="/images/Dashboard/food category.jpg" id="imagee"></a> 
+                    </div>
+                    <div class="text">
+                        <h5>Food Photography</h5>
+                    </div>
+                </div>
+                <div class="ideas-content">
+                    <div class="image1">
+                        <a href="/shivpicture"><img src="/images/Dashboard/lord shiva.jpg" id="imagee"></a>
+                    </div>
+                    <div class="text">
+                        <h5>Photos of lord shiva</h5>
+                    </div>
+                </div>
+                <img src="/images/close.png" id="closeimg" onclick="srchCLick()">
+             </div>
+             <h3>Popular on pinterest</h3>
+             <div class="contents">
+                <div class="ideas-content">
+                    <div class="image1">
+                        <a href="/saraswatipictures"><img src="/images/Dashboard/Saraswati devi.jpeg" id="imagee"></a>
+                    </div>
+                    <div class="text">
+                        <h5>Saraswati pictues</h5>
+                    </div>
+                </div>
+                <div class="ideas-content">
+                    <div class="image1">
+                        <img src="/images/Dashboard/Ganesh ji.jpg" id="imagee">
+                    </div>
+                    <div class="text">
+                        <h5>Ganesh ji</h5>
+                    </div>
+                </div>
+                <div class="ideas-content">
+                    <div class="image1">
+                        <img src="/images/Dashboard/Black wallpaper.jpg" id="imagee">
+                    </div>
+                    <div class="text">
+                        <h5>Black wallpaper</h5>
+                    </div>
+                </div><br>
+             </div>
+            </div>
+        </div>
+ <!-- ........................................POPUP ENDS............................................................................. -->
+        <div class="right-nav">
+            <div class="logo">
+            <img src="/images/icon-ios7-bell-512.jpg" title="Notifications" class="bellimg">
+            <a href="/profile"><img src="/images/profile-user.png" title="Profile" class="profileimg"></a>
+            <a href="/logout" class="logout">Logout</a>
+            </div>
+        </div>
+        <div id="hamburger">
+            <img src="/images/bars-solid.svg" alt="" onclick="HAMBURGER()" id="hamburger">
+        </div>
+       </div>
+<!-- .....................................................NAVBAR ENDS.......................................................... -->
+<!--.......................................MAIN STARTS.............................................................................-->
+    <div id="main">
+        <!--..........................FIRSTROW.........................................-->
+        <div class="Firstrow">
+            <div class="picture1" onmouseover="In()" onmouseout="Out()">
+                <img src="/images/Food photography/Food 1.jpg" alt="Picture1">
+                <a href="/images/Food photography/Food 1.jpg" download="First_image" id="one">Save</a>
+            </div>
+            <div class="picture2" onmouseover="In1()" onmouseout="Out1()">
+                <img src="/images/Food photography/Food 2.jpg" alt="Picture2">
+                <a href="/images/Food photography/Food 2.jpg" download="Second_image" id="two">Save</a>
+            </div>
+            <div class="picture3" onmouseover="In2()" onmouseout="Out2()">
+                <img src="/images/Food photography/Food 3.jpg" alt="Picture3">
+                <a href="/images/Food photography/Food 3.jpg" download="third_image" id="three">Save</a>
+            </div>
+            <div class="picture4" onmouseover="In3()" onmouseout="Out3()">
+                <img src="/images/Food photography/Food 4.jpg" alt="Picture4">
+                <a href="/images/Food photography/Food 4.jpg" download="fourth_image" id="four">Save</a>
+            </div>
+            <div class="picture5" onmouseover="In4()" onmouseout="Out4()">
+                <img src="/images/Food photography/Food 5.jpg" alt="Picture5">
+                <a href="/images/Food photography/Food 5.jpg" download="fifth_image" id="five">Save</a>
+            </div>
+            <div class="picture6" onmouseover="In5()" onmouseout="Out5()">
+                <img src="/images/Food photography/Food 6.jpg" alt="Picture6">
+                <a href="/images/Food photography/Food 6.jpg" download="sixth_image" id="six">Save</a>
+            </div>
+        </div>
+        <!--............................................SECOND ROW...........................................-->
+        <div class="Secondrow">
+            <div class="picture7" onmouseover="In6()" onmouseout="Out6()">
+                <img src="/images/Food photography/Food 7.jpg" alt="Picture7">
+                <a href="/images/Food photography/Food 7.jpg" download="Seventh_image" id="seven">Save</a>
+             </div>
+             <div class="picture8" onmouseover="In7()" onmouseout="Out7()">
+                <img src="/images/Food photography/Food 8.jpg" alt="Picture8">
+                <a href="/images/Food photography/Food 8.jpg" download="Eighth_image" id="eight">Save</a>
+            </div>
+            <div class="picture9" onmouseover="In8()" onmouseout="Out8()">
+                <img src="/images/Food photography/Food 9.jpg" alt="Picture9">
+                <a href="/images/Food photography/Food 9.jpg" download="ninth_image" id="nine">Save</a>
+            </div>
+            <div class="picture10" onmouseover="In9()" onmouseout="Out9()">
+                <img src="/images/Food photography/Food 10.jpg" alt="Picture10">
+                <a href="/images/Food photography/Food 10.jpg" download="Tenth_image" id="ten">Save</a>
+            </div>  
+            <div class="picture11" onmouseover="In10()" onmouseout="Out10()">
+                <img src="/images/Food photography/Food 11.jpg" alt="Picture11">
+                <a href="/images/Food photography/Food 11.jpg" download="Eleventh_image" id="eleven">Save</a>
+            </div>
+            <div class="picture12" onmouseover="In11()" onmouseout="Out11()">
+                <img src="/images/Food photography/Food 12.jpg" alt="Picture12">
+                <a href="/images/Food photography/Food 12.jpg" download="Twelve_image" id="twelve">Save</a>
+            </div>
+        </div>
+        <!--...........................................THIRD ROW............................................................-->
+        <div class="Thirdrow">
+            <div class="picture13" onmouseover="In12()" onmouseout="Out12()">
+                <img src="/images/Food photography/Food 13.jpg" alt="Picture13">
+                <a href="/images/Food photography/Food 13.jpg" download="Thirteenth_image" id="thirteen">Save</a>
+             </div>
+             <div class="picture14" onmouseover="In13()" onmouseout="Out13()">
+                <img src="/images/Food photography/Food 14.jpg" alt="Picture14">
+                <a href="/images/Food photography/Food 14.jpg" download="Fourteenth_image" id="fourteen">Save</a>
+            </div>
+            <div class="picture15" onmouseover="In14()" onmouseout="Out14()">
+                <img src="/images/Food photography/Food 15.jpg" alt="Picture15">
+                <a href="/images/Food photography/Food 15.jpg" download="Fifteenth_image" id="fifteen">Save</a>
+            </div>
+            <div class="picture16" onmouseover="In15()" onmouseout="Out15()">
+                <img src="/images/Food photography/Food 16.jpg" alt="Picture16">
+                <a href="/images/Food photography/Food 16.jpg" download="Sixteenth_image" id="sixteen">Save</a>
+            </div>  
+            <div class="picture17" onmouseover="In16()" onmouseout="Out16()">
+                <img src="/images/Food photography/Food 17.jpg" alt="Picture17">
+                <a href="/images/Food photography/Food 17.jpg" download="Seventeenth_image" id="seventeen">Save</a>
+            </div>
+             <div class="picture18" onmouseover="In17()" onmouseout="Out17()">
+                <img src="/images/Food photography/Food 18.jpg" alt="Picture18">
+                <a href="/images/Food photography/Food 18.jpg" download="Eighteen_image" id="eightteen">Save</a>
+            </div>
+        </div>
+        <!--.................................................FOURTHROW......................................................-->
+        <!--..........................MAIN ENDS........................................................................-->
+        </div>
+    </section>
+    </div>
+
+    <script src="/javascripts/Dashboard.js"></script>
+</body>
+</html>

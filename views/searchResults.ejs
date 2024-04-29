@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/searchResults.css">
+    <title>Search Results</title>
+</head>
+<body id="container">
+    <center>
+    <h1>SEARCH RESULTS:-</h1>
+    <hr>
+    <br>
+    <% if (posts.length > 0) { %>
+        <div id="imageContainer">
+            <% posts.forEach(post => { %>
+                <div id="POSTS">
+                    <label>POST TITLE:-</label>
+                    <br>
+                    <h1 id="h1"><%= post.title %></h1>
+                    <label>POST DESCRIPTION:-</label>
+                    <p id="pst"><%= post.description %></p>
+                    <label>USERNAME:-</label>
+                    <h1 id="h1"><%= post.user.name %></h1>
+                    <img src= "/images/uplods/<%=post.image%>"   alt="<%= post.title %>" />
+                    <a href="/images/uplods/<%=post.image%>" download="First_image" id="one">Save</a>
+                </div>
+            <% }); %>
+        </div>
+    <% } else { %>
+        <h1 id="h1">No results found!!!</h1>
+    <% } %>
+</center>
+</body>
+</html>

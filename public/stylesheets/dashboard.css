@@ -1,0 +1,679 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Arial, sans-serif;
+}
+body{
+    scroll-behavior: smooth;
+}
+#container{
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+section{
+    height: 100vh;
+    width: 100vw;
+}
+/* ///....................NAVBAR STARTS............................//////////////// */
+#nav{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    padding: 2vw;
+    align-items: center;
+    justify-content: center;
+}
+#nav .left-nav{
+    height: 100%;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.8vw;
+}
+.firstpic{
+    height: 2.5vw;
+}
+#nav .left-nav a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+#nav .center-nav{
+    height: 100%;
+    width: 60%;
+    display: flex;
+}
+#nav .center-nav .searchbar{
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding-left:1vw ;
+}
+#nav .center-nav .searchbar #searchbar-space{
+    height: 50%;
+    width: 100%;
+    border-radius: 30px;
+    border: transparent;
+    background-color: #E9E9E9;
+    padding: 1.5vw;
+    font-weight: 1px;
+    font-size: 17px;
+}
+/* .......................................POPUP CONTENT......................... */
+#popup{
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.popup-content{
+    height: calc(100% - 150px);
+    width: 55%;
+    background-color: white;
+    border-radius: 15px;
+    position: relative;
+    padding: 30px 20px
+}
+.contents{
+    display: flex;
+    gap: 0.5vw;
+    height: 40%;
+    width: 100%;
+    padding-top: 10px;
+
+}
+#closeimg{
+    height: 25px;
+    position: relative;
+    bottom: 4.3vw;
+    right: -2vw;
+    cursor:pointer;
+}
+.ideas-content{
+    margin-top: 10px;
+    height: 10vw;
+    width: 70vw;
+    background-color: #E9E9E9;
+    display: flex;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.ideas-content #imagee{
+    height: 10vw;
+    width: 8vw;
+    border-radius: 20px;
+
+}
+.ideas-content .text{
+    width: 50%;
+    height: 100%;
+    padding: 10px;
+    font-size: 1.3vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ideas-content:hover{
+    background-color: #676666;
+}
+/* ...............................popup content ends................................... */
+#nav .right-nav{
+    height: 100%;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    padding: 1.4vw;
+    margin-left: 1vw;
+    gap: 2vw;
+    /* background-color: black; */
+}
+#nav .right-nav .logo{
+    display: flex;
+    align-items: center;
+    gap: 2.5vw;
+}
+#nav .right-nav .bellimg{
+    height: 40px;
+}
+#nav .right-nav .profileimg{
+    height: 30px;
+}
+
+#nav .left-nav a:hover{
+    background-color: rgb(10, 10, 10);
+    border: 1px solid black;
+    color: white;
+    border-radius: 10px;
+    padding: 3%;
+    height: 2.5vw;
+    width: 5vw;
+}
+#nav .logout{
+    text-decoration: none;
+    height: 3vw;
+    width: 6vw;
+    padding-top: 1vw;
+    padding-left: 1.1vw;
+    font-family: sans-serif;
+    border-radius: 20px;
+    background-color: rgb(212, 3, 3);
+    color: white;
+}
+#nav .right-nav img:hover{
+    border-radius: 50%;
+    background-color: #676666;
+    padding: 5%;
+    height: 4vw;
+}
+.hover{
+    display: flex;
+    position: relative;
+    top: 3vw;
+    gap: 1vw;
+    right: 19vw;
+    color: rgb(215, 215, 215);
+}
+.hover .hovone{
+    display: none;
+    background-color: black;
+    padding: 0.5vw;
+    border-radius: 10px;
+}
+.hover .hovtwo{
+    display: none;
+    background-color: black;
+    padding: 0.5vw;
+    border-radius: 10px;
+}
+/* ......................................NAVBAR ENDS................................................. */
+
+/* .........................................MAIN STARTS................................................... */
+#main{
+    height: calc(100% - 100px);
+    width: 100%;
+    box-sizing: border-box;
+    /* background-color: #676666; */
+}
+/* /////////////////.........................................FIRST ROW.............................. */
+#main .Firstrow{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    padding: 3px 0px 2px 13px;
+    gap: 0.5vw;
+    box-sizing: border-box;
+}
+#main .Firstrow img{
+    height: 20vw;
+    width: 16vw;
+    border-radius: 20px;
+}
+/* //................................................IMG HOVER........................................//// */
+/* //................................................Firstrow........................................//// */
+#main .Firstrow .picture1 #one{
+    height: 2.5vw;
+    width: 4vw;
+    padding: 5%;
+    border-radius: 10px;
+    display: none;
+    text-decoration: none;
+    color: white;
+    background-color:rgb(210, 3, 3);
+    position: relative;
+    top: -19vw;
+    left: 11vw;
+}
+#main .Firstrow .picture2 #two{
+    height: 2.5vw;
+    width: 4vw;
+    padding: 5%;
+    border-radius: 10px;
+    display: none;
+    text-decoration: none;
+    color: white;
+    background-color:rgb(210, 3, 3);
+    position: relative;
+    top: -19vw;
+    left: 11vw;   
+}
+#main .Firstrow .picture3 #three{
+    height: 2.5vw;
+    width: 4vw;
+    padding: 5%;
+    border-radius: 10px;
+    display: none;
+    text-decoration: none;
+    color: white;
+    background-color:rgb(210, 3, 3);
+    position: relative;
+    top: -19vw;
+    left: 11vw;   
+}
+#main .Firstrow .picture4 #four{
+    height: 2.5vw;
+    width: 4vw;
+    padding: 5%;
+    border-radius: 10px;
+    display: none;
+    text-decoration: none;
+    color: white;
+    background-color:rgb(210, 3, 3);
+    position: relative;
+    top: -19vw;
+    left: 11vw;   
+}
+#main .Firstrow .picture5 #five{
+    height: 2.5vw;
+    width: 4vw;
+    padding: 5%;
+    border-radius: 10px;
+    display: none;
+    text-decoration: none;
+    color: white;
+    background-color:rgb(210, 3, 3);
+    position: relative;
+    top: -19vw;
+    left: 11vw;   
+}
+#main .Firstrow .picture6 #six{
+    height: 2.5vw;
+    width: 4vw;
+    padding: 5%;
+    border-radius: 10px;
+    display: none;
+    text-decoration: none;
+    color: white;
+    background-color:rgb(210, 3, 3);
+    position: relative;
+    top: -19vw;
+    left: 11vw;   
+}
+/* //................................................Secondrow........................................//// */
+#main .Secondrow .picture7 #seven{
+    height: 2.5vw;
+    width: 4vw;
+    padding: 5%;
+    border-radius: 10px;
+    display: none;
+    text-decoration: none;
+    color: white;
+    background-color:rgb(210, 3, 3);
+    position: relative;
+    top: -19vw;
+    left: 11vw;   
+}
+#main .Secondrow .picture8 #eight{
+    height: 2.5vw;
+    width: 4vw;
+    padding: 5%;
+    border-radius: 10px;
+    display: none;
+    text-decoration: none;
+    color: white;
+    background-color:rgb(210, 3, 3);
+    position: relative;
+    top: -19vw;
+    left: 11vw;   
+}
+#main .Secondrow .picture9 #nine{
+    height: 2.5vw;
+    width: 4vw;
+    padding: 5%;
+    border-radius: 10px;
+    display: none;
+    text-decoration: none;
+    color: white;
+    background-color:rgb(210, 3, 3);
+    position: relative;
+    top: -19vw;
+    left: 11vw;   
+}
+#main .Secondrow .picture10 #ten{
+    height: 2.5vw;
+    width: 4vw;
+    padding: 5%;
+    border-radius: 10px;
+    display: none;
+    text-decoration: none;
+    color: white;
+    background-color:rgb(210, 3, 3);
+    position: relative;
+    top: -19vw;
+    left: 11vw;   
+}
+#main .Secondrow .picture11 #eleven{
+    height: 2.5vw;
+    width: 4vw;
+    padding: 5%;
+    border-radius: 10px;
+    display: none;
+    text-decoration: none;
+    color: white;
+    background-color:rgb(210, 3, 3);
+    position: relative;
+    top: -19vw;
+    left: 11vw;   
+}
+#main .Secondrow .picture12 #twelve{
+    height: 2.5vw;
+    width: 4vw;
+    padding: 5%;
+    border-radius: 10px;
+    display: none;
+    text-decoration: none;
+    color: white;
+    background-color:rgb(210, 3, 3);
+    position: relative;
+    top: -19vw;
+    left: 11vw;   
+}
+/* //................................................Thirdrow........................................//// */
+#main .Thirdrow .picture13 #thirteen{
+    height: 2.5vw;
+    width: 4vw;
+    padding: 5%;
+    border-radius: 10px;
+    display: none;
+    text-decoration: none;
+    color: white;
+    background-color:rgb(210, 3, 3);
+    position: relative;
+    top: -19vw;
+    left: 11vw;   
+}
+#main .Thirdrow .picture14 #fourteen{
+    height: 2.5vw;
+    width: 4vw;
+    padding: 5%;
+    border-radius: 10px;
+    display: none;
+    text-decoration: none;
+    color: white;
+    background-color:rgb(210, 3, 3);
+    position: relative;
+    top: -19vw;
+    left: 11vw;   
+}
+#main .Thirdrow .picture15 #fifteen{
+    height: 2.5vw;
+    width: 4vw;
+    padding: 5%;
+    border-radius: 10px;
+    display: none;
+    text-decoration: none;
+    color: white;
+    background-color:rgb(210, 3, 3);
+    position: relative;
+    top: -19vw;
+    left: 11vw;   
+}
+#main .Thirdrow .picture16 #sixteen{
+    height: 2.5vw;
+    width: 4vw;
+    padding: 5%;
+    border-radius: 10px;
+    display: none;
+    text-decoration: none;
+    color: white;
+    background-color:rgb(210, 3, 3);
+    position: relative;
+    top: -19vw;
+    left: 11vw;   
+}
+#main .Thirdrow .picture17 #seventeen{
+    height: 2.5vw;
+    width: 4vw;
+    padding: 5%;
+    border-radius: 10px;
+    display: none;
+    text-decoration: none;
+    color: white;
+    background-color:rgb(210, 3, 3);
+    position: relative;
+    top: -19vw;
+    left: 11vw;   
+}
+#main .Thirdrow .picture18 #eightteen{
+    height: 2.5vw;
+    width: 4vw;
+    padding: 5%;
+    border-radius: 10px;
+    display: none;
+    text-decoration: none;
+    color: white;
+    background-color:rgb(210, 3, 3);
+    position: relative;
+    top: -19vw;
+    left: 11vw;   
+}
+#main .Fourthrow .picture19 #nineteen{
+    height: 2.5vw;
+    width: 4vw;
+    padding: 5%;
+    border-radius: 10px;
+    display: none;
+    text-decoration: none;
+    color: white;
+    background-color:rgb(210, 3, 3);
+    position: relative;
+    top: -19vw;
+    left: 11vw;   
+}
+#main .Fourthrow .picture20 #twenty{
+    height: 2.5vw;
+    width: 4vw;
+    padding: 5%;
+    border-radius: 10px;
+    display: none;
+    text-decoration: none;
+    color: white;
+    background-color:rgb(210, 3, 3);
+    position: relative;
+    top: -19vw;
+    left: 11vw;   
+}
+#main .Fourthrow .picture21 #twentyone{
+    height: 2.5vw;
+    width: 4vw;
+    padding: 5%;
+    border-radius: 10px;
+    display: none;
+    text-decoration: none;
+    color: white;
+    background-color:rgb(210, 3, 3);
+    position: relative;
+    top: -19vw;
+    left: 11vw;   
+}
+#main .Fourthrow .picture22 #twentytwo{
+    height: 2.5vw;
+    width: 4vw;
+    padding: 5%;
+    border-radius: 10px;
+    display: none;
+    text-decoration: none;
+    color: white;
+    background-color:rgb(210, 3, 3);
+    position: relative;
+    top: -19vw;
+    left: 11vw;   
+}
+#main .Fourthrow .picture23 #twentythree{
+    height: 2.5vw;
+    width: 4vw;
+    padding: 5%;
+    border-radius: 10px;
+    display: none;
+    text-decoration: none;
+    color: white;
+    background-color:rgb(210, 3, 3);
+    position: relative;
+    top: -19vw;
+    left: 11vw;   
+}
+#main .Fourthrow .picture24 #twentyfour{
+    height: 2.5vw;
+    width: 4vw;
+    padding: 5%;
+    border-radius: 10px;
+    display: none;
+    text-decoration: none;
+    color: white;
+    background-color:rgb(210, 3, 3);
+    position: relative;
+    top: -19vw;
+    left: 11vw;   
+}
+
+/* //................................................IMG HOVER........................................//// */
+/* ///...................SECOND ROW............................................................. */
+#main .Secondrow{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    padding: 3px 0px 2px 13px;
+    gap: 0.5vw;
+    box-sizing: border-box;
+}
+#main .Secondrow img{
+    height: 20vw;
+    width: 16vw;
+    border-radius: 20px;
+}
+/* ........................THIRD ROW............................................................ */
+#main .Thirdrow{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    padding: 3px 0px 2px 13px;
+    gap: 0.5vw;
+    box-sizing: border-box;
+}
+#main .Thirdrow img{
+    height: 20vw;
+    width: 16vw;
+    border-radius: 20px;
+}
+/* ................................FOURTH ROW.................................................. */
+#main .Fourthrow{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    padding: 3px 0px 2px 13px;
+    gap: 0.5vw;
+    box-sizing: border-box;
+}
+#main .Fourthrow img{
+    height: 20vw;
+    width: 16vw;
+    border-radius: 20px;
+}
+#search{
+    background-color: red;
+    padding: 5px;
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+    font-weight: 600;
+}
+.searchbar{
+    gap: 10px;
+}
+
+@media (max-width:1180px){
+    #nav{
+        display: flex;
+        justify-content: space-around;
+    }
+    #nav .firstpic{
+        height: 20vw;
+    }
+    #nav .left-nav{
+        display: none;
+    }
+    #nav .center-nav{
+        display: none;
+    }
+    #nav .right-nav{
+        display: none;
+    }
+    #main .Firstrow{
+        height:35% ;
+    }
+    #main .Firstrow img{
+        height: 50vw;
+    }
+    #main .Secondrow img{
+        height: 50vw;
+    }
+    #main .Secondrow{
+        height:35% ;
+    }
+    #main .Thirdrow{
+        height:35% ;
+    }
+    #main .Thirdrow img{
+        height: 50vw;
+    }
+    #main .Fourthrow{
+        height:35% ;
+    }
+    #main .Fourthrow img{
+        height: 50vw;
+    }
+    #main a{
+        font-size: 10px;
+        padding: 10px;
+    }
+     #nav #hamburger{
+        display: flex;
+        height: 50px;
+    }
+}
+#hamburger{
+    height: 20px;
+    width: 20px;
+    display: none;
+}
+/* ....................hamburger popup............................................................... */
+#hamburger-popup{
+    background: rgba(0, 0, 0, 0.6);
+    width: 50%;
+    right: 0;
+    height: 2310%;
+    position: absolute;
+    top: 105px;
+    display: none;
+
+}
+#hamburger-popup a{
+    text-decoration: none;
+    background-color: red;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+    padding-left: 14px;
+    height: 50px;
+    border-radius: 10px;
+}
+#hamburger-popup #close{
+    height: 80px;
+    position: absolute;
+    right: 0;
+    padding-bottom:50px ;
+}
+#hamburger{
+    cursor: pointer;
+}

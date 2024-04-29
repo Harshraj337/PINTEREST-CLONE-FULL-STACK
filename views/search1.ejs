@@ -1,0 +1,34 @@
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/search1.css">
+  <title>Search Bar</title>
+</head>
+<body>
+  <!-- Assuming this is your frontend HTML -->
+<div id="app">
+  <img src="/images/Pinterest-Logooo.png" alt="" id="img">
+  <input id="searchbar-space" type="text" name="search_bar" placeholder="Search for feeds!">
+  <button id="btn" onclick="search()">Search</button>
+  <a href="/dashboard" id="hme">HOME</a>
+</div>
+<hr>
+<div id="imageContainer"></div>
+<script>
+  function search() {
+      const searchText = document.getElementById('searchbar-space').value;
+      fetch(`/search?searchText=${searchText}`) // Enclose URL in quotes and add backticks
+          .then(response => response.text())
+          .then(html => {
+              document.getElementById('imageContainer').innerHTML = html;
+          })
+          .catch(err => console.error(err));
+  }
+</script>
+
+
+</body>
+</html>

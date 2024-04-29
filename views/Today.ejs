@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/Today.css">
+    <link rel="icon" href="/images/Pinterest-logo.png">
+    <title>Today</title>
+</head>
+<body>
+    <div id="navbar">
+        <div class="left-nav">
+            <img src="/images/Pinterest-Logooo.png" alt="logo">
+            <a class="too" href="/Today">Today</a>
+           <a class="too" href="/"> Home</a>
+        </div>
+        <div class="right-nav">
+            <a class="too" href="/index">Login</a>
+            <a id="signup" href="/register">Sign up</a>
+        </div>
+    </div>
+    <hr>
+    <div id="body">
+        <div class="text">
+            <center >
+                <h3 id="h3"></h3>
+                <h1>Stay Inspired</h1>
+            </center>
+            </div>
+            <div id="images">
+                <img src="/images/women nature.jpeg" alt="">
+                <img src="/images/shinchan.jpg" alt="">
+                <img src="/images/headfone.jpg" alt="">
+            </div>
+            <center>
+                <img src="/images/check-solid.svg" alt="" class="tick">
+                <h3>That's it for today!</h3>
+                <h1>Comeback tomorrow for more inspiration</h1>
+            </center>
+    </div>
+    <script>
+        var today = new Date();
+var dd = String(today.getDate()).padStart(2, '0');
+var mm = String(today.getMonth() + 1).padStart(2, '0'); // जनवरी 0 होता है!
+var yyyy = today.getFullYear();
+// Define an array of month names
+var monthNames = ["January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"
+];
+// Get the month name using the numeric month value
+var monthIndex = today.getMonth();
+var monthName = monthNames[monthIndex];
+// Construct the formatted date string
+today = dd + ' ' + monthName + ', ' + yyyy;
+    document.querySelector('#h3').innerHTML=today;    
+    </script>
+</body>
+</html>

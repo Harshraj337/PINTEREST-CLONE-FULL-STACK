@@ -1,0 +1,497 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Arial, sans-serif;
+}
+#container{
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 100vh;
+}
+section{
+    height: 100vh;
+    scroll-snap-align: start;
+}
+.header{
+    height: 100%;
+    width: 100%;
+    position: relative;/*This is useful thing that this relative position will let its all child inside it*/
+}
+.nav{
+    height: 100px;/*100px means it will take the 10 percent height area from body height which is 100%*/
+    width: 100%;
+    border-bottom: 2px solid rgb(254, 252, 252);
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+img{
+    height:4vw;
+    padding:0 2vw 0 2vw;
+}
+.left-nav{
+    display: flex;
+    gap: 3vw;
+    width: 50%;   
+}
+.left-nav a{
+    text-decoration: none;
+    font-weight: 550;
+    color: black;
+}
+.left-nav a:hover{
+    border-bottom: 2px solid black;
+}
+.right-nav {
+    padding: 0 1vw 0 0;
+    width: 50%; 
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 3vw;
+}
+.right-nav a{
+    text-decoration: none;
+    font-weight: 550;
+    color: black;
+}
+.right-nav .btn1{
+    padding: 0.8vw 1vw;
+    border-radius: 2vw;
+    color: white;
+    font-weight: bold;
+    background-color: rgb(236, 4, 4);
+    border: transparent;
+    cursor: pointer;
+}
+.right-nav .btn1:hover{
+    background: #34495e;
+    color: #fff;
+}
+.right-nav .btn2{
+    padding:  0.8vw 1vw;
+    font-weight: bold;
+    border-radius: 2vw;
+    border: transparent;
+    color: black;
+    cursor: pointer;
+}
+.right-nav .btn2:hover{
+    background: #34495e;
+    color: #fff;
+}
+.right-nav a:hover{
+    border-bottom: 2px solid black;
+}
+/* ..................................popup/........................................................ */
+#popup-1{
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.popup-content1{
+    height: 600px;
+    width: 500px;
+    background: url('pexels-karolina-grabowska-4194850.jpg') no-repeat center center/cover;
+    padding: 20px 150px;
+    border-radius: 20px;
+    position: relative;
+}
+.popup-content1 input{
+    margin: 20px auto;
+    display: block;
+    width: 100%;
+    padding: 8px;
+    border: 3px solid rgb(9, 9, 9);
+}
+.popup-content1 button{
+    height: 40px;
+    width: 100px;
+    margin-top: 10px;
+    margin-left: 30px;
+    background-color: red;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+.popup-content1 img{
+    height: 100px;
+}
+.popup-content1 label{
+    font-size: 1.5vw;
+    font-weight: bold;
+    color: black;
+}
+.popup-content1 .close1{
+    position: absolute;
+    top: -5px;
+    right: -40px;
+    height: 30px;
+    cursor: pointer;
+}
+/* ........................................................................................ */
+#popup{
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.popup-content{
+    height: 400px;
+    width: 500px;
+    background: url('pexels-karolina-grabowska-4194850.jpg') no-repeat center center/cover;
+    padding: 20px 150px;
+    border-radius: 20px;
+    position: relative;
+}
+.close{
+    position: absolute;
+    top: -10px;
+    right: -35px;
+    height: 20px;
+    cursor: pointer;
+}
+.popup-content h2{
+    text-align: center;
+    font-size: 2vw;
+    background: linear-gradient(to right, #ff5757 ,#ffb53f, #fff100, #9ae900, #15ffe1, #816aff, #ff0040);
+    -webkit-text-stroke: 0.1em transparent;
+    background-clip: text;
+    color: #111111;
+}
+.popup-content .imgicon{
+    margin-top: 10px;
+}
+.popup-content a{
+    font-size: 1vw;
+    color: rgb(6, 6, 6);
+    text-decoration: none;
+    font-weight: 550;
+}
+.popup-content a:hover{
+    border-bottom: 1px solid black;
+}
+.popup-content input{
+    margin: 20px auto;
+    display: block;
+    width: 100%;
+    padding: 8px;
+    border: 3px solid rgb(9, 9, 9);
+}
+.popup-content button{
+    height: 40px;
+    width: 100px;
+    margin-top: 10px;
+    margin-left: 30px;
+    background-color: red;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+/* ............................................................................................................ */
+
+#main{
+    height: calc(100% - 100px);
+    width: 100%;
+    position: relative;
+}
+
+.one{
+    height: 13vw;
+    margin: 0 30vw 0 30vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+    font-size: 2vw;
+}
+.two{
+    color:#518C7B;
+    display: flex;
+    margin: 0 30vw 0 30vw;
+    justify-content: center;
+    align-items: center;
+    font-size:1.3vw ;
+    margin-bottom: 4vh;
+}
+/* .................................................................slider.......................................... */
+#slider{
+    box-sizing: border-box;
+    height: 2vw;
+}
+.slides{
+    display: flex;
+    gap: 1vw;
+    align-items: center;
+    justify-content: center;
+}
+/* ......................................images.............................................. */
+.img-sliders{
+    box-sizing: border-box;
+    height: 18vw;
+    width: auto;
+    display: flex;
+}
+.img-sliders img{
+    height: 95%;
+}
+/* .....................................images end......................................... */
+.arrow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#FFFD92 ;
+}
+.arrow button{
+    border-radius: 1vw;
+    background-color: #518C7B;
+    cursor: pointer;
+    color: white;
+    border: 2px solid transparent;
+}
+
+.last-div{
+    background-color: #FFFD92;
+    height: 1.6vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.last-div h5{
+    font-size: 1vw;
+    font-weight: 550;
+}
+span{
+    writing-mode:vertical-lr;
+    font-weight: bold;
+    font-size: 1vw;
+    padding: 3px 3px;
+}
+#main2 img{
+    height: 10%;
+    width: 10%;
+}
+/* ........................... 2nd page...................................................... */
+.SECOND{
+    background-color: #FFFD92;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+#left1{
+    height: 100%;
+    width: 50%;
+}
+#left1 .pictures1{
+    height: 50%;
+    box-sizing: border-box;
+    padding-top: 30px;
+}
+#left1 .pictures1 img{
+    height: 80%;
+    width: 80%;
+    border-radius: 15%;
+}
+#left1 .pictures2 {
+    height: 50%;
+    box-sizing: border-box;
+}
+#left1 .pictures2 img{
+    height: 80%;
+    width: 80%;
+    border-radius: 15%;
+}
+/* ....................................... */
+#right2{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#right2 .words{
+    height: 80%;
+    width: 100%;
+    padding-left: 10%;
+    padding-top: 20%;
+    padding-right: 10%;
+}
+#right2 .words h1{
+    font-weight: 600;
+    font-size:4vw;
+    color: #C31952;
+}
+#right2 .words p{
+    font-size: 2vw;
+    margin-bottom: 20px;
+    color: #C31952;
+}
+#right2 button{
+    margin-left: 15vw;
+    font-size: 1.5vw;
+    padding: 1vw;
+    border-radius: 5vw;
+    color: white;
+    background-color: red;
+    border: transparent;
+    cursor: pointer;
+}
+/* ..................................................third/..................................... */
+.THIRD{
+    background-color: #DAFFF6;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+.left2{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.left2 .words2{
+    height: 80%;
+    width: 100%;
+    padding-left: 10%;
+    padding-top: 20%;
+    padding-right: 10%;
+}
+.left2 .words2 h1{
+    font-weight: 600;
+    font-size:3.5vw;
+    color: #006B6C;
+}
+.left2 .words2 p{
+    font-size: 1.5vw;
+    margin-bottom: 20px;
+    color: #006B6C;
+}
+.left2 .words2 button{
+    margin-left: 10vw;
+    font-size: 1.5vw;
+    padding: 1vw;
+    border-radius: 5vw;
+    color: white;
+    background-color: red;
+    border: transparent;
+    cursor: pointer;
+}
+.right3{
+    height: 100%;
+    width: 50%;
+}
+.right3 .three{
+    height: 50%;
+    display: flex;
+    padding-top: 20px;
+}
+.right3 .three img{
+    height: 90%;
+    width: 60%;
+    border-radius: 15%;
+}
+.right3 .four{
+    height: 50%;
+    display: flex;
+}
+.right3 .four img{
+    height: 90%;
+    width: 60%;
+    border-radius: 15%;
+}
+.left3{
+    height: 100%;
+    width: 50%;
+}
+.right4{
+    height: 100%;
+    width: 50%;
+}
+/* .......................................................fourth......................................... */
+.FOURTH{
+    background-color: #ffe2eb;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+.FOURTH .right4{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.FOURTH .right4 h1{
+    font-weight: 600;
+    font-size:4.5vw;
+    color: #C32F00;
+}
+.FOURTH .right4 p{
+    font-size: 1.5vw;
+    margin-bottom: 20px;
+    color: #C32F00;
+}
+.FOURTH .right4 button{
+    margin-left: 10vw;
+    font-size: 1.5vw;
+    padding: 1vw;
+    border-radius: 5vw;
+    color: white;
+    background-color: red;
+    border: transparent;
+    cursor: pointer;
+}
+.left3{
+    height: 100%;
+    width: 50%;
+    display: flex;
+}
+.left3 img{
+    height: 100%;
+    width: 100%;
+    padding: 0;
+}
+/* /..........................Fifth................................................................/// */
+.FIFTH{
+    height: 100vh;
+    width: 100vw;
+}
+.FIFTH .top{
+    height: 95%;
+    width: 100%;
+}
+.FIFTH .top img{
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+.FIFTH .down{
+    display: flex;
+    height: 5%;
+    width: 100%;
+}
+.FIFTH .down a{
+    padding-top: 0.5vw;
+    margin-left: 15px;
+    text-decoration: none;
+    padding-left: 25px;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
+.FIFTH .down a:hover{
+    border-bottom: 4px solid black;
+}

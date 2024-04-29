@@ -1,0 +1,19 @@
+<% include  ./partials/header.ejs %>
+<div class="w-full h-screen bg-zinc-300 flex items-center justify-center">
+  <div class="w-90 h-[60vh] bg-zinc-100  px-20 py-10 rounded-[30px]">
+    <h1 class="text-3xl tracking-tighter text-center font-semibold text-zinc-700  leading-none ">Welcome to pinterest</h1>
+    <form action="/login" method="post" >
+      <input type="hidden" name="_csrf" value="${token}"/>
+      <input type="text"    class='block w-full mt-2  px=3 py-2' name="username" placeholder="Username"/>
+      <input type="password"    class='block w-full mt-2  px=3 py-2' name="password" placeholder="Password"/>
+      <a class="mt-2 block text-xs align-middle" href="#">Forgot your password?</a>
+      
+      <input type="submit"  value="login"  class="block w-full mt-2  px=3 py-2 bg-red-600  text-white rounded-full" />
+      
+    </form>
+<a class="inline-block mt-7 text-sm font-semibold text-center text-zinc-700 w-full " href="/register" >Dont have an account ? Sign up</a>
+  </div>
+</div>
+
+<% include  ./partials/footer.ejs %>
+ 
